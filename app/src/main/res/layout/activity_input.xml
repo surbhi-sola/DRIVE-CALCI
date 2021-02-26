@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:background="@color/bg_main"
+    tools:context=".InputActivity">
+    <LinearLayout
+        android:id="@+id/inputmainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="@string/intro_input"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background">
+        <TextView
+            android:id="@+id/viewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/purple_700"
+            android:text="Vehicle Data"/>
+
+        <LinearLayout
+            android:id="@+id/vehicledata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/inputSection1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <EditText
+                    android:id="@+id/vehicleWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Vehicle Weight(in Kg)"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/wheelradius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Wheel Radius(in cm)"
+                    android:inputType="numberDecimal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inputSection2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <EditText
+                    android:id="@+id/cellVoltage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Voltage of Cell Used"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/cellCapacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Capacity of Cell"
+                    android:inputType="numberDecimal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inputSection3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <EditText
+                    android:id="@+id/dragCefficient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Cd (drag coefficient)"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/frontalArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Frontal area"
+                    android:inputType="numberDecimal" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Other info: (Optional)"
+                android:textColor="@color/teal_700"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:id="@+id/inputSection4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <EditText
+                    android:id="@+id/rollingResistanceCoefficient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Rolling resistance coefficient"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/inclination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Gradeα/Inclination"
+                    android:inputType="numberDecimal" />
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/velocitytimelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="10dp">
+        <LinearLayout
+            android:id="@+id/inputSection5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp">
+
+            <EditText
+                android:id="@+id/time_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Time (in s)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/velocity_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Velocity (in m/s)"
+                android:inputType="numberDecimal" />
+
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/motorDatalayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/inputSection6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="15dp">
+
+                <EditText
+                    android:id="@+id/motorRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Rated Power Of Motor"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:id="@+id/motorWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Motor Weight"
+                    android:inputType="numberDecimal"
+                    />
+                <EditText
+                    android:id="@+id/motorSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Motor Size"
+                    />
+                <EditText
+                    android:id="@+id/motorVoltage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Motor Voltage Rating"
+                    android:inputType="numberDecimal"
+                    />
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/motorDataOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/displaySection1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/motorRatedPowerDisplay"
+                    android:textSize="24sp"
+                    android:text="app"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/motorWeightDisplay"
+                    android:textSize="24sp"
+                    android:text="app"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/motorSizeDisplay"
+                    android:textSize="24sp"
+                    android:text="app"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"/>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/generalDataOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:visibility="gone"
+            android:orientation="vertical"
+
+            android:padding="10dp">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/purple_700"
+                android:text="Vehicle Data Output"/>
+            <LinearLayout
+                android:id="@+id/displaySection2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maxVelocityDisplay"
+                    android:textSize="24sp"
+                    android:text="app"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maxAccelerationDisplay"
+                    android:textSize="24sp"
+                    android:text="app"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/averageVelocityDisplay"
+                    android:textSize="24sp"
+                    android:text="app"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/averageAccelerationDisplay"
+                    android:textSize="24sp"
+                    android:text="app"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"/>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/graphOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:visibility="gone"
+            android:orientation="vertical"
+
+            android:padding="10dp">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/purple_700"
+                android:text="Output Graph"/>
+            <LinearLayout
+                android:id="@+id/displaySection3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/graphView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@drawable/background">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/submit_vehicleData">
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/purple_700"
+                android:textColor="@color/white"
+                android:text="Submit -> Proceed"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/submit_velocityTime">
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/add_velocity_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/purple_700"
+                android:textColor="@color/white"
+                android:text="Add Data"/>
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/submit_velocity_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/purple_700"
+                android:textColor="@color/white"
+                android:text="Submit -> Proceed"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/submit_MotorData">
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/add_motorData_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/purple_700"
+                android:textColor="@color/white"
+                android:text="Add Data"/>
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/submit_motorData_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/purple_700"
+                android:textColor="@color/white"
+                android:text="Submit -> Proceed"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/background"
+        android:visibility="gone"
+        android:id="@+id/velocityshow">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/teal_700"
+            android:textSize="26sp"
+            android:text="Last Data Added"
+            android:id="@+id/velocitytimelistview"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/velociti"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
